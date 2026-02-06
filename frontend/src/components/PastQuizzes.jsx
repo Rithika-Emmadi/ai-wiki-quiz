@@ -3,7 +3,7 @@ import QuizDisplay from './QuizDisplay'
 import TakeQuizMode from './TakeQuizMode'
 import './PastQuizzes.css'
 
-const API_BASE = import.meta.env.VITE_API_URL || '/api'
+import { apiGet } from '../lib/api'
 
 export default function PastQuizzes() {
   const [quizzes, setQuizzes] = useState([])
@@ -17,9 +17,7 @@ export default function PastQuizzes() {
     setLoading(true)
     setError(null)
     try {
-      const res = await fetch(`${API_BASE}/quizzes`)
-      const data = await res.json().catch(() => ({}))
-      if (!res.ok) throw new Error(data.detail || 'Failed to load quizzes')
+      const data = await apiGet('/quizzes')
       setQuizzes(data)
     } catch (err) {
       setError(err.message)
@@ -37,9 +35,7 @@ export default function PastQuizzes() {
     setSelectedQuiz(null)
     setDetailViewMode('study')
     try {
-      const res = await fetch(`${API_BASE}/quizzes/${id}`)
-      const data = await res.json().catch(() => ({}))
-      if (!res.ok) throw new Error(data.detail || 'Failed to load quiz')
+      const data = await apiGet(`/quizzes/${id}`)
       setSelectedQuiz(data)
     } catch (err) {
       setError(err.message)

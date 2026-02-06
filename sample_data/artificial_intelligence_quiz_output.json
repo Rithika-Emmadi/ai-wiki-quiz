@@ -1,39 +1,143 @@
 {
-  "id": 2,
   "url": "https://en.wikipedia.org/wiki/Artificial_intelligence",
   "title": "Artificial intelligence",
-  "summary": "Artificial intelligence (AI) is the intelligence of machines or software, as opposed to the intelligence of humans or animals. It is a field of study in computer science that develops and studies intelligent machines. AI may also refer to the machines themselves...",
+  "summary": "Artificial general intelligence Recursive self-improvement Knowledge representation Natural language processing Evolutionary algorithms Hybrid intelligent systems Generative AIArtAudioMusic HealthcareMental health Artificial consciousness Deepfake pornographyTaylor Swift deepfake pornography controversyGrok deepfake pornography controversy Taylor Swift deepfake pornography controversy Grok deepfake pornography controversy Google Gemini image generation controversy Pause Giant AI Experiments Removal of Sam Altman from OpenAI Théâtre D'opéra Spatial Voiceverse NFT plagiarism scandal Artificial intelligence(AI) is the capability ofcomputational systemsto perform tasks typically associated withhuman intelligence, such aslearning,reasoning,problem-solving,perception, anddecision-making. It is a...",
   "key_entities": {
-    "people": ["Alan Turing", "John McCarthy", "Geoffrey Hinton"],
-    "organizations": ["DARPA", "Stanford University", "MIT"],
-    "locations": ["United States", "United Kingdom"]
+    "people": [
+      "Noam Chomsky",
+      "Margaret Masterman",
+      "Gordon Moore",
+      "Jensen Huang",
+      "Garry Kasparov"
+    ],
+    "organizations": [
+      "Google",
+      "OpenAI",
+      "Google DeepMind",
+      "Meta",
+      "Intel",
+      "Nvidia",
+      "Microsoft"
+    ],
+    "locations": []
   },
-  "sections": ["History", "Goals", "Techniques", "Applications", "Ethics"],
+  "sections": [
+    "Goals",
+    "Reasoning and problem-solving",
+    "Knowledge representation",
+    "Planning and decision-making",
+    "Learning",
+    "Natural language processing",
+    "Perception",
+    "Social intelligence",
+    "General intelligence",
+    "Techniques",
+    "Search and optimization",
+    "Logic",
+    "Probabilistic methods for uncertain reasoning",
+    "Classifiers and statistical learning methods",
+    "Artificial neural networks"
+  ],
+  "related_topics": [
+    "Artificial neural networks",
+    "Machine learning",
+    "Deep learning",
+    "Natural language processing",
+    "Computer vision",
+    "Robotics"
+  ],
+  "id": 1,
   "quiz": [
     {
-      "question": "Who is often considered the father of artificial intelligence?",
-      "options": ["Alan Turing", "John McCarthy", "Claude Shannon", "Norbert Wiener"],
-      "answer": "John McCarthy",
-      "difficulty": "medium",
-      "explanation": "John McCarthy coined the term 'artificial intelligence' in 1956 at the Dartmouth Conference.",
-      "section": "History"
-    },
-    {
-      "question": "What test did Alan Turing propose to evaluate machine intelligence?",
-      "options": ["The IQ Test", "The Turing Test", "The Imitation Game", "The Turing Examination"],
-      "answer": "The Turing Test",
+      "question": "What is the capability of computational systems to perform tasks typically associated with human intelligence?",
+      "options": [
+        "Learning",
+        "Reasoning",
+        "Problem-solving",
+        "Perception and decision-making"
+      ],
+      "answer": "Perception and decision-making",
       "difficulty": "easy",
-      "explanation": "The Turing Test evaluates a machine's ability to exhibit intelligent behavior indistinguishable from a human.",
-      "section": "History"
+      "explanation": "According to the article, AI is the capability of computational systems to perform tasks typically associated with human intelligence, such as learning, reasoning, problem-solving, perception, and decision-making. (Section: Introduction)",
+      "section": "Introduction",
+      "id": 1,
+      "sort_order": 0
     },
     {
-      "question": "Which approach to AI uses statistical methods and large datasets?",
-      "options": ["Symbolic AI", "Machine learning", "Expert systems", "Logic programming"],
-      "answer": "Machine learning",
+      "question": "What is the name of the field that comprises systems that recognize, interpret, process, or simulate human feeling, emotion, and mood?",
+      "options": [
+        "Affective computing",
+        "Natural language processing",
+        "Machine learning",
+        "Perception"
+      ],
+      "answer": "Affective computing",
+      "difficulty": "easy",
+      "explanation": "According to the article, affective computing is a field that comprises systems that recognize, interpret, process, or simulate human feeling, emotion, and mood. (Section: Social intelligence)",
+      "section": "Social intelligence",
+      "id": 2,
+      "sort_order": 1
+    },
+    {
+      "question": "What is the name of the algorithm used for filtering, prediction, smoothing, and finding explanations for streams of data?",
+      "options": [
+        "Hidden Markov models",
+        "Kalman filters",
+        "Bayesian networks",
+        "Dynamic Bayesian networks"
+      ],
+      "answer": "Hidden Markov models",
       "difficulty": "medium",
-      "explanation": "Machine learning relies on statistical methods and learns patterns from large amounts of data.",
-      "section": "Techniques"
+      "explanation": "According to the article, probabilistic algorithms can also be used for filtering, prediction, smoothing, and finding explanations for streams of data, thus helping perception systems analyze processes that occur over time, such as hidden Markov models or Kalman filters. (Section: Probabilistic methods for uncertain reasoning)",
+      "section": "Probabilistic methods for uncertain reasoning",
+      "id": 3,
+      "sort_order": 2
+    },
+    {
+      "question": "What is the name of the type of machine learning that runs inputs through biologically inspired artificial neural networks?",
+      "options": [
+        "Supervised learning",
+        "Unsupervised learning",
+        "Reinforcement learning",
+        "Deep learning"
+      ],
+      "answer": "Deep learning",
+      "difficulty": "medium",
+      "explanation": "According to the article, deep learning is a type of machine learning that runs inputs through biologically inspired artificial neural networks for all of these types of learning. (Section: Learning)",
+      "section": "Learning",
+      "id": 4,
+      "sort_order": 3
+    },
+    {
+      "question": "What is the name of the architecture used in deep learning that uses an attention mechanism?",
+      "options": [
+        "Word embedding",
+        "Transformers",
+        "Generative pre-trained transformers",
+        "Recurrent neural networks"
+      ],
+      "answer": "Transformers",
+      "difficulty": "hard",
+      "explanation": "According to the article, modern deep learning techniques for NLP include word embedding, transformers, and others. (Section: Natural language processing)",
+      "section": "Natural language processing",
+      "id": 5,
+      "sort_order": 4
+    },
+    {
+      "question": "What is the name of the algorithm used to train neural networks?",
+      "options": [
+        "Backpropagation",
+        "Gradient descent",
+        "Evolutionary computation",
+        "Particle swarm optimization"
+      ],
+      "answer": "Backpropagation",
+      "difficulty": "hard",
+      "explanation": "According to the article, the most common training technique is the backpropagation algorithm. (Section: Artificial neural networks)",
+      "section": "Artificial neural networks",
+      "id": 6,
+      "sort_order": 5
     }
   ],
-  "related_topics": ["Machine learning", "Neural network", "Natural language processing", "Computer vision", "Deep learning"]
+  "created_at": "2026-02-06T03:50:25"
 }

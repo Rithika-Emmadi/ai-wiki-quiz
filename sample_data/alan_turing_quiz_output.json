@@ -1,54 +1,172 @@
 {
-  "id": 1,
   "url": "https://en.wikipedia.org/wiki/Alan_Turing",
   "title": "Alan Turing",
-  "summary": "Alan Mathison Turing OBE FRS was an English mathematician, computer scientist, logician, cryptanalyst, philosopher, and theoretical biologist. Turing was highly influential in the development of theoretical computer science, providing a formalisation of the concepts of algorithm and computation with the Turing machine, which can be considered a model of a general-purpose computer...",
+  "summary": "Alan Mathison Turing(/ˈtjʊərɪŋ/; 23 June 1912 – 7 June 1954) was an Englishmathematician,computer scientist,logician,cryptanalyst,philosopherandtheoretical biologist.[6]He was highly influential in the development oftheoretical computer science, providing a formalisation of the concepts ofalgorithmandcomputationwith theTuring machine, which can be considered a model of a general-purposecomputer.[7][8][9]Turing is widely considered to be the father of theoretical computer science.[10] Born in London, Turing was raised insouthern England. He graduated fromKing's College, Cambridge, and in 1938, earned a doctorate degree fromPrinceton University. DuringWorld War II, Turing worked for theGovernment Code and Cypher SchoolatBletchley Park, Britain'scodebreakingcentre that producedUltraintelligen...",
   "key_entities": {
-    "people": ["Alan Turing", "Alonzo Church", "Gordon Welchman"],
-    "organizations": ["University of Cambridge", "Bletchley Park", "National Physical Laboratory"],
-    "locations": ["United Kingdom", "Manchester"]
+    "people": [
+      "Alan Turing",
+      "Julius Mathison Turing",
+      "Ethel Sara Turing",
+      "John Ferrier Turing",
+      "Douglas Hofstadter",
+      "Gordon Brown",
+      "Queen Elizabeth II"
+    ],
+    "organizations": [
+      "Government Code and Cypher School",
+      "National Physical Laboratory",
+      "Computing Machine Laboratory",
+      "Indian Civil Service",
+      "Bengal Army"
+    ],
+    "locations": [
+      "London",
+      "Maida Vale",
+      "India",
+      "Madras Presidency",
+      "Odisha",
+      "Chatrapur",
+      "Netherlands",
+      "Britain",
+      "Bletchley Park",
+      "Princeton University",
+      "King's College, Cambridge",
+      "University of Manchester",
+      "County Tipperary",
+      "County Longford",
+      "County Clare",
+      "Dublin",
+      "Ballsbridge",
+      "Clyde Road",
+      "British Raj"
+    ]
   },
-  "sections": ["Early life", "Education", "Career and research", "World War II", "Death", "Legacy"],
+  "sections": [
+    "Early life and education",
+    "Family",
+    "School",
+    "Christopher Morcom",
+    "University and work on computability",
+    "Career and research",
+    "Cryptanalysis",
+    "Bombe",
+    "Hut 8 and the naval Enigma",
+    "Turingery"
+  ],
+  "related_topics": [
+    "Theoretical Computer Science",
+    "Computer Science",
+    "Codebreaking",
+    "World War II",
+    "Mathematical Biology"
+  ],
+  "id": 2,
   "quiz": [
     {
-      "question": "Where did Alan Turing study for his undergraduate degree?",
+      "question": "Where was Alan Turing born?",
       "options": [
-        "Harvard University",
-        "University of Cambridge",
-        "Oxford University",
-        "Princeton University"
+        "London",
+        "Maida Vale",
+        "India",
+        "Madras Presidency"
       ],
-      "answer": "University of Cambridge",
+      "answer": "Maida Vale",
       "difficulty": "easy",
-      "explanation": "Turing studied at King's College, Cambridge, where he was awarded first-class honours in mathematics.",
-      "section": "Education"
+      "explanation": "Turing was born in Maida Vale, London, while his father was on leave from his position with the Indian Civil Service (ICS) of the British Raj government at Chatrapur, then in the Madras Presidency and presently in Odisha state, in India.",
+      "section": "Early life and education",
+      "id": 7,
+      "sort_order": 0
     },
     {
-      "question": "What was Alan Turing's main contribution during World War II?",
+      "question": "What was the name of the machine that Alan Turing worked on to break German ciphers?",
       "options": [
-        "Atomic research",
-        "Breaking the Enigma code",
-        "Inventing radar",
-        "Developing jet engines"
+        "Bombe",
+        "Enigma machine",
+        "Turing machine",
+        "Automatic Computing Engine"
       ],
-      "answer": "Breaking the Enigma code",
+      "answer": "Bombe",
       "difficulty": "medium",
-      "explanation": "Turing worked at Bletchley Park and played a pivotal role in breaking German Enigma-encrypted communications.",
-      "section": "World War II"
+      "explanation": "Turing devised techniques for speeding the breaking of German ciphers, including improvements to the pre-war Polish bomba method, an electromechanical machine that could find settings for the Enigma machine.",
+      "section": "Cryptanalysis",
+      "id": 8,
+      "sort_order": 1
     },
     {
-      "question": "What theoretical concept did Turing formalise that became foundational to computer science?",
+      "question": "What was the name of the laboratory where Alan Turing worked at the University of Manchester?",
       "options": [
-        "The compiler",
-        "The Turing machine",
-        "Binary logic",
-        "The transistor"
+        "Computing Machine Laboratory",
+        "National Physical Laboratory",
+        "Government Code and Cypher School",
+        "Hut 8"
       ],
-      "answer": "The Turing machine",
+      "answer": "Computing Machine Laboratory",
       "difficulty": "medium",
-      "explanation": "The Turing machine is a mathematical model of computation that formalises the concepts of algorithm and computation.",
-      "section": "Career and research"
+      "explanation": "In 1948, Turing joined Max Newman's Computing Machine Laboratory at the University of Manchester, where he contributed to the development of early Manchester computers.",
+      "section": "Career and research",
+      "id": 9,
+      "sort_order": 2
+    },
+    {
+      "question": "What was the name of the award that Alan Turing won in a 2019 BBC series?",
+      "options": [
+        "Alan Turing Award",
+        "Turing Prize",
+        "Turing Medal",
+        "Greatest Scientist of the 20th Century"
+      ],
+      "answer": "Greatest Scientist of the 20th Century",
+      "difficulty": "medium",
+      "explanation": "The audience vote in a 2019 BBC series named Turing the greatest scientist of the 20th century.",
+      "section": "Introduction",
+      "id": 10,
+      "sort_order": 3
+    },
+    {
+      "question": "What was the procedure that Alan Turing accepted as an alternative to prison in 1952?",
+      "options": [
+        "Hormone treatment",
+        "Chemical castration",
+        "Prison sentence",
+        "Probation"
+      ],
+      "answer": "Chemical castration",
+      "difficulty": "easy",
+      "explanation": "In 1952, Turing was prosecuted for homosexual acts. He accepted hormone treatment, a procedure commonly referred to as chemical castration, as an alternative to prison.",
+      "section": "Introduction",
+      "id": 11,
+      "sort_order": 4
+    },
+    {
+      "question": "What was the name of the chemical reaction that Alan Turing predicted?",
+      "options": [
+        "Belousov–Zhabotinsky reaction",
+        "Turing reaction",
+        "Oscillating chemical reactions",
+        "Morphogenesis"
+      ],
+      "answer": "Belousov–Zhabotinsky reaction",
+      "difficulty": "hard",
+      "explanation": "Turing wrote on the chemical basis of morphogenesis and predicted oscillating chemical reactions such as the Belousov–Zhabotinsky reaction, first observed in the 1960s.",
+      "section": "Career and research",
+      "id": 12,
+      "sort_order": 5
+    },
+    {
+      "question": "Where was Alan Turing's portrait first released on a banknote?",
+      "options": [
+        "Bank of England",
+        "National Bank of England",
+        "Royal Bank of England",
+        "Bank of Scotland"
+      ],
+      "answer": "Bank of England",
+      "difficulty": "easy",
+      "explanation": "His portrait appears on the Bank of England £50 note, first released on 23 June 2021 to coincide with his birthday.",
+      "section": "Introduction",
+      "id": 13,
+      "sort_order": 6
     }
   ],
-  "related_topics": ["Cryptography", "Enigma machine", "Computer science history", "Bletchley Park", "Turing test"]
+  "created_at": "2026-02-06T04:18:12"
 }

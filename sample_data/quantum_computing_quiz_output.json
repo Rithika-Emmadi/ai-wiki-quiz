@@ -1,0 +1,109 @@
+{
+  "url": "https://en.wikipedia.org/wiki/Quantum_computing",
+  "title": "Quantum computing",
+  "summary": "Aquantum computeris a (real or theoretical)computerthat exploitssuperposedandentangledstates. Quantum computers can be viewed as sampling from quantum systems that evolve in ways that may be described as operating on an enormous number of possibilities simultaneously, though still subject to strict computational constraints. By contrast, ordinary (\"classical\") computers operate according todeterministicrules. (Aclassical computercan, in principle, be replicated by aclassical mechanical device, with only a simple multiple of time cost. On the other hand (it is believed), a quantum computer would requireexponentiallymore time and energy to be simulated classically.) It is widely believed that a quantum computer could performsomecalculations exponentially faster than any classical computer. F...",
+  "key_entities": {
+    "people": [],
+    "organizations": [],
+    "locations": []
+  },
+  "sections": [
+    "History",
+    "Quantum information processing",
+    "Quantum information",
+    "Unitary operators",
+    "Quantum parallelism",
+    "Quantum programming",
+    "Communication",
+    "Algorithms",
+    "Simulation of quantum systems",
+    "Post-quantum cryptography"
+  ],
+  "related_topics": [
+    "History",
+    "Quantum information processing",
+    "Quantum information",
+    "The",
+    "Quantum",
+    "However"
+  ],
+  "id": 4,
+  "quiz": [
+    {
+      "question": "According to the article, what is The result ofmeasuringa qubit?",
+      "options": [
+        "one of the two states given by aprobabilistic rule",
+        "not yet practical for real-world applications",
+        "not sufficientlyisolatedfrom its environment, it suffers fromquantum decoherence, introducingnoiseinto calculations",
+        "not necessarily useful for real-world applications"
+      ],
+      "answer": "one of the two states given by aprobabilistic rule",
+      "difficulty": "easy",
+      "explanation": "This answer is taken directly from a sentence in the article text.",
+      "section": "History",
+      "id": 20,
+      "sort_order": 0
+    },
+    {
+      "question": "According to the article, what are Quantum computers?",
+      "options": [
+        "one of the two states given by aprobabilistic rule",
+        "not sufficientlyisolatedfrom its environment, it suffers fromquantum decoherence, introducingnoiseinto calculations",
+        "not necessarily useful for real-world applications",
+        "not yet practical for real-world applications"
+      ],
+      "answer": "not yet practical for real-world applications",
+      "difficulty": "easy",
+      "explanation": "This answer is taken directly from a sentence in the article text.",
+      "section": "Quantum information processing",
+      "id": 21,
+      "sort_order": 1
+    },
+    {
+      "question": "According to the article, what is If a physical qubit?",
+      "options": [
+        "not yet practical for real-world applications",
+        "not necessarily useful for real-world applications",
+        "not sufficientlyisolatedfrom its environment, it suffers fromquantum decoherence, introducingnoiseinto calculations",
+        "one of the two states given by aprobabilistic rule"
+      ],
+      "answer": "not sufficientlyisolatedfrom its environment, it suffers fromquantum decoherence, introducingnoiseinto calculations",
+      "difficulty": "easy",
+      "explanation": "This answer is taken directly from a sentence in the article text.",
+      "section": "Quantum information",
+      "id": 22,
+      "sort_order": 2
+    },
+    {
+      "question": "According to the article, what are These tasks?",
+      "options": [
+        "not sufficientlyisolatedfrom its environment, it suffers fromquantum decoherence, introducingnoiseinto calculations",
+        "not necessarily useful for real-world applications",
+        "one of the two states given by aprobabilistic rule",
+        "not yet practical for real-world applications"
+      ],
+      "answer": "not necessarily useful for real-world applications",
+      "difficulty": "medium",
+      "explanation": "This answer is taken directly from a sentence in the article text.",
+      "section": "Unitary operators",
+      "id": 23,
+      "sort_order": 3
+    },
+    {
+      "question": "Which of the following is a section listed in the article 'Quantum computing'?",
+      "options": [
+        "History",
+        "Overview",
+        "Appendix",
+        "Bibliography"
+      ],
+      "answer": "History",
+      "difficulty": "easy",
+      "explanation": "Section names are taken from the scraped article structure.",
+      "section": "History",
+      "id": 24,
+      "sort_order": 4
+    }
+  ],
+  "created_at": "2026-02-06T07:51:13"
+}

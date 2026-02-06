@@ -3,7 +3,7 @@ import QuizDisplay from './QuizDisplay'
 import TakeQuizMode from './TakeQuizMode'
 import './GenerateQuiz.css'
 
-const API_BASE = 'http://127.0.0.1:8000/api'
+import { apiGet, apiPost } from '../lib/api'
 
 export default function GenerateQuiz() {
   const [url, setUrl] = useState('')
@@ -20,9 +20,7 @@ export default function GenerateQuiz() {
     setPreviewTitle(null)
     setPreviewLoading(true)
     try {
-      const res = await fetch(`${API_BASE}/preview?url=${encodeURIComponent(url.trim())}`)
-      const data = await res.json().catch(() => ({}))
-      if (!res.ok) throw new Error(data.detail || 'Invalid URL')
+      const data = await apiGet(`/preview?url=${encodeURIComponent(url.trim())}`)
       setPreviewTitle(data.title)
     } catch (err) {
       setError(err.message)
@@ -42,18 +40,7 @@ export default function GenerateQuiz() {
     }
     setLoading(true)
     try {
-      const res = await fetch(`${API_BASE}/generate`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ url: url.trim() }),
-      })
-      const data = await res.json().catch(() => ({}))
-      if (!res.ok) {
-        const msg = Array.isArray(data.detail)
-          ? data.detail.map((d) => d.msg || d.message).join(', ')
-          : data.detail || 'Failed to generate quiz'
-        throw new Error(msg)
-      }
+      const data = await apiPost('/generate', { url: url.trim() })
       setQuizData(data)
     } catch (err) {
       setError(err.message)
