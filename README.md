@@ -1,212 +1,91 @@
-Got it 👍
-Below is a FINAL, CLEAN, INTERVIEW-SAFE README.md.
+# AI Wiki Quiz Generator
 
-You can directly copy–paste this entire content into your README.md file.
-No edits needed.
+Full-stack app that turns a Wikipedia URL into a quiz (Tab 1) and stores every generated quiz in a local database so **quiz history shows up in Tab 2** (with a details modal).
 
-⸻
+## Technology stack
 
+- **Backend**: FastAPI + SQLAlchemy
+- **Frontend**: React + Vite
+- **Database**: SQLite by default (`backend/wiki_quiz.db`)
+- **LLM**: Groq via LangChain (optional). If no key is provided, the backend falls back to a local heuristic generator so the project still runs end-to-end.
 
-# AI-Powered Wikipedia Quiz Generator
+## Run the project (Windows)
 
-An end-to-end full-stack application that converts Wikipedia articles into interactive quizzes using Large Language Models (LLMs).  
-The system scrapes article content directly from HTML, applies controlled AI prompting, and generates structured, verifiable quizzes with explanations — without using the Wikipedia API.
+### Backend (FastAPI)
 
----
-
-## Project Motivation
-
-This project was built to explore practical challenges in real-world AI applications, including:
-- Managing LLM token limits
-- Preventing hallucinations through prompt constraints
-- Backend caching and data persistence
-- Clean integration between FastAPI and React
-
-The focus is on **engineering reliability**, not just AI output.
-
----
-
-## Core Features
-
-### Quiz Generation
-- Accepts any valid English Wikipedia article URL
-- Scrapes article content using HTML parsing
-- Generates **5–10 multiple-choice questions**
-- Each question includes:
-  - Four options (A–D)
-  - Correct answer
-  - Explanation derived strictly from article content
-  - Difficulty level (easy / medium / hard)
-
-### User Interaction Modes
-- **Study Mode** – answers and explanations visible
-- **Quiz Mode** – attempt questions and receive a score
-- **History View** – view previously generated quizzes
-
-### Backend Optimizations
-- URL-based caching to prevent duplicate scraping
-- Article content truncation to respect LLM token limits
-- Optional storage of raw HTML for reference
-
----
-
-## Technology Stack
-
-| Layer | Technology |
-|------|-----------|
-| Backend | Python, FastAPI |
-| Frontend | React, Vite |
-| Database | MySQL (SQLite supported locally) |
-| AI / LLM | Google Gemini (via LangChain) |
-| Web Scraping | BeautifulSoup |
-
----
-
-## System Architecture
-
-Wikipedia URL
-↓
-HTML Scraper (BeautifulSoup)
-↓
-Cleaned & Limited Article Content
-↓
-Prompted LLM (LangChain + Gemini)
-↓
-Structured Quiz JSON
-↓
-Database Cache
-↓
-React Frontend
-
----
-
-## Setup Instructions
-
-### Prerequisites
-- Python 3.10+
-- Node.js 18+
-- MySQL (or a hosted alternative)
-
----
-
-### Backend Setup
-
-```bash
+```powershell
 cd backend
 python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+.\.venv\Scripts\python -m pip install -r requirements.txt
+.\.venv\Scripts\activate
+python -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
+```
 
-Create a .env file inside backend/:
+- **Health**: `http://127.0.0.1:8000/health`
+- **Docs**: `http://127.0.0.1:8000/docs`
 
-DATABASE_URL=mysql+pymysql://root:password@localhost:3306/wiki_quiz?charset=utf8mb4
-GOOGLE_API_KEY=your_gemini_api_key
-GEMINI_MODEL=gemini-1.5-flash
+Optional Groq key (real LLM generation):
 
-Create the database:
+- Copy `backend/env.example` → `backend/.env` (create this file manually)
+- Put your `GROQ_API_KEY=...` in it
 
-mysql -u root -p -e "CREATE DATABASE wiki_quiz;"
+### Frontend (React)
 
-Run the backend:
-
-uvicorn app.main:app --reload --port 8000
-
-Verify backend health:
-
-http://127.0.0.1:8000/health
-
-
-⸻
-
-Frontend Setup
-
+```powershell
 cd frontend
 npm install
 npm run dev
+```
 
-Frontend runs at:
+Open: `http://localhost:5173`
 
-http://localhost:5173
+Vite is configured to proxy `/api/*` → `http://127.0.0.1:8000` (see `frontend/vite.config.js`).
 
+## API endpoints
 
-⸻
+- **POST** `/api/generate` — generate quiz from Wikipedia URL (and persist it)
+- **GET** `/api/preview?url=...` — validate URL and fetch title
+- **GET** `/api/quizzes` — list quiz history
+- **GET** `/api/quizzes/{id}` — quiz details (used by the details modal)
+- **GET** `/health` — health check
 
-API Endpoints
+## Prompt templates (LangChain)
 
-Method	Endpoint	Description
-POST	/api/generate	Generate quiz from Wikipedia URL
-GET	/api/preview	Validate URL and return article title
-GET	/api/quizzes	List all generated quizzes
-GET	/api/quizzes/{id}	Fetch quiz details
-GET	/health	Backend health check
+Prompt templates are in `backend/app/prompts/quiz_prompts.py`:
 
+- `QUIZ_GENERATION_PROMPT`: quiz + related-topics generation (JSON-only output)
+- `RELATED_TOPICS_PROMPT`: optional related topic-only prompt
+- `KEY_ENTITIES_PROMPT`: optional entity extraction prompt
 
-⸻
+## Sample data
 
-Prompt Engineering Notes
-	•	All quiz content is generated only from scraped article text
-	•	The LLM is explicitly instructed to avoid external knowledge
-	•	Output is enforced to be valid JSON
-	•	Difficulty distribution is controlled
-	•	Article content length is restricted to handle token limits safely
+`sample_data/` contains:
 
-Prompt templates are located in:
+- `urls_tested.txt`: URLs tested
+- `*_quiz_output.json`: saved JSON outputs from calling `POST /api/generate`
 
-backend/app/prompts/quiz_prompts.py
+## Screenshots
 
+`screenshots/` contains:
 
-⸻
+- `tab1_generate_quiz.png`
+- `tab2_history.png`
+- `details_modal.png`
 
-Project Structure
+To regenerate screenshots (requires backend on `:8000` and frontend on `:5174`):
 
-ai-wiki-quiz/
-├── backend/
-│   ├── app/
-│   │   ├── main.py
-│   │   ├── config.py
-│   │   ├── database.py
-│   │   ├── models/
-│   │   ├── schemas/
-│   │   ├── services/
-│   │   ├── prompts/
-│   │   └── routers/
-│   └── requirements.txt
-├── frontend/
-│   ├── src/
-│   │   ├── App.jsx
-│   │   └── components/
-├── sample_data/
-├── screenshots/
-└── README.md
+```powershell
+cd frontend
+npm install
+npx playwright install chromium --with-deps
 
+# start frontend on a dedicated port in a separate terminal:
+# npx vite --host 127.0.0.1 --port 5174
 
-⸻
+$env:FRONTEND_URL="http://127.0.0.1:5174/"
+npm run screenshots
+```
 
-Future Enhancements
-	•	User authentication and saved quiz attempts
-	•	Section-wise quiz generation
-	•	Chunked processing for large articles
-	•	Deployment on cloud platforms (Render / Vercel)
-	•	Adaptive difficulty based on user performance
+## Repo note (duplicate folder)
 
-⸻
-
-License
-
-MIT
-
----
-
-### ✅ You can now safely:
-- Copy-paste this into `README.md`
-- Push to GitHub
-- Show it to interviewers
-
-This **will NOT look cloned** — it reads like a thoughtfully engineered project.
-
-If you want next:
-- Resume bullet points
-- Interview explanation (1-minute answer)
-- Deployment guide
-
-Just say the word 🚀
+There is also an `ai-wiki-quiz/` folder that mirrors the root project layout. The canonical runnable app is the **root** `backend/` and `frontend/`.
