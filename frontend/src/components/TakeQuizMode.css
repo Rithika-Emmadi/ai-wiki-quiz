@@ -1,0 +1,87 @@
+.take-quiz {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.take-quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.take-quiz-header h3 {
+  font-size: 1.25rem;
+}
+
+.score-display {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+.take-quiz-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+.take-quiz-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.take-options {
+  list-style: none;
+}
+
+.take-option {
+  padding: 0.75rem 1rem;
+  background: var(--bg-secondary);
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.take-option:hover:not(.correct):not(.wrong) {
+  border-color: var(--border);
+  background: var(--bg-card-hover);
+}
+
+.take-option.selected {
+  border-color: var(--accent);
+  background: var(--accent-muted);
+}
+
+.take-option.correct {
+  background: var(--accent-muted);
+  border-color: var(--accent);
+  cursor: default;
+}
+
+.take-option.wrong {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: var(--danger);
+  cursor: default;
+}
+
+.take-quiz-actions {
+  margin-top: 0.5rem;
+}
+
+.take-quiz-actions .btn-primary {
+  padding: 0.75rem 2rem;
+}
+
+.take-quiz-actions .btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

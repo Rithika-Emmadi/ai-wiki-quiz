@@ -1,0 +1,39 @@
+{
+  "id": 2,
+  "url": "https://en.wikipedia.org/wiki/Artificial_intelligence",
+  "title": "Artificial intelligence",
+  "summary": "Artificial intelligence (AI) is the intelligence of machines or software, as opposed to the intelligence of humans or animals. It is a field of study in computer science that develops and studies intelligent machines. AI may also refer to the machines themselves...",
+  "key_entities": {
+    "people": ["Alan Turing", "John McCarthy", "Geoffrey Hinton"],
+    "organizations": ["DARPA", "Stanford University", "MIT"],
+    "locations": ["United States", "United Kingdom"]
+  },
+  "sections": ["History", "Goals", "Techniques", "Applications", "Ethics"],
+  "quiz": [
+    {
+      "question": "Who is often considered the father of artificial intelligence?",
+      "options": ["Alan Turing", "John McCarthy", "Claude Shannon", "Norbert Wiener"],
+      "answer": "John McCarthy",
+      "difficulty": "medium",
+      "explanation": "John McCarthy coined the term 'artificial intelligence' in 1956 at the Dartmouth Conference.",
+      "section": "History"
+    },
+    {
+      "question": "What test did Alan Turing propose to evaluate machine intelligence?",
+      "options": ["The IQ Test", "The Turing Test", "The Imitation Game", "The Turing Examination"],
+      "answer": "The Turing Test",
+      "difficulty": "easy",
+      "explanation": "The Turing Test evaluates a machine's ability to exhibit intelligent behavior indistinguishable from a human.",
+      "section": "History"
+    },
+    {
+      "question": "Which approach to AI uses statistical methods and large datasets?",
+      "options": ["Symbolic AI", "Machine learning", "Expert systems", "Logic programming"],
+      "answer": "Machine learning",
+      "difficulty": "medium",
+      "explanation": "Machine learning relies on statistical methods and learns patterns from large amounts of data.",
+      "section": "Techniques"
+    }
+  ],
+  "related_topics": ["Machine learning", "Neural network", "Natural language processing", "Computer vision", "Deep learning"]
+}

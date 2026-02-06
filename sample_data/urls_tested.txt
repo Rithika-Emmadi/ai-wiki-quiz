@@ -1,0 +1,5 @@
+# Wikipedia URLs Tested
+
+https://en.wikipedia.org/wiki/Alan_Turing
+https://en.wikipedia.org/wiki/Artificial_intelligence
+https://en.wikipedia.org/wiki/Quantum_computing

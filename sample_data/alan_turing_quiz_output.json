@@ -1,0 +1,54 @@
+{
+  "id": 1,
+  "url": "https://en.wikipedia.org/wiki/Alan_Turing",
+  "title": "Alan Turing",
+  "summary": "Alan Mathison Turing OBE FRS was an English mathematician, computer scientist, logician, cryptanalyst, philosopher, and theoretical biologist. Turing was highly influential in the development of theoretical computer science, providing a formalisation of the concepts of algorithm and computation with the Turing machine, which can be considered a model of a general-purpose computer...",
+  "key_entities": {
+    "people": ["Alan Turing", "Alonzo Church", "Gordon Welchman"],
+    "organizations": ["University of Cambridge", "Bletchley Park", "National Physical Laboratory"],
+    "locations": ["United Kingdom", "Manchester"]
+  },
+  "sections": ["Early life", "Education", "Career and research", "World War II", "Death", "Legacy"],
+  "quiz": [
+    {
+      "question": "Where did Alan Turing study for his undergraduate degree?",
+      "options": [
+        "Harvard University",
+        "University of Cambridge",
+        "Oxford University",
+        "Princeton University"
+      ],
+      "answer": "University of Cambridge",
+      "difficulty": "easy",
+      "explanation": "Turing studied at King's College, Cambridge, where he was awarded first-class honours in mathematics.",
+      "section": "Education"
+    },
+    {
+      "question": "What was Alan Turing's main contribution during World War II?",
+      "options": [
+        "Atomic research",
+        "Breaking the Enigma code",
+        "Inventing radar",
+        "Developing jet engines"
+      ],
+      "answer": "Breaking the Enigma code",
+      "difficulty": "medium",
+      "explanation": "Turing worked at Bletchley Park and played a pivotal role in breaking German Enigma-encrypted communications.",
+      "section": "World War II"
+    },
+    {
+      "question": "What theoretical concept did Turing formalise that became foundational to computer science?",
+      "options": [
+        "The compiler",
+        "The Turing machine",
+        "Binary logic",
+        "The transistor"
+      ],
+      "answer": "The Turing machine",
+      "difficulty": "medium",
+      "explanation": "The Turing machine is a mathematical model of computation that formalises the concepts of algorithm and computation.",
+      "section": "Career and research"
+    }
+  ],
+  "related_topics": ["Cryptography", "Enigma machine", "Computer science history", "Bletchley Park", "Turing test"]
+}

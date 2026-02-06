@@ -1,0 +1,136 @@
+.generate-quiz {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.generate-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.input-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .input-row {
+    flex-direction: row;
+  }
+
+  .input-row input {
+    flex: 1;
+  }
+
+  .button-group {
+    flex-shrink: 0;
+  }
+}
+
+.generate-form input {
+  padding: 0.75rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.generate-form input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.generate-form input::placeholder {
+  color: var(--text-muted);
+}
+
+.btn-primary {
+  padding: 0.75rem 1.5rem;
+  background: var(--accent);
+  color: #000;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  padding: 0.75rem 1.25rem;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-weight: 500;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+}
+
+.btn-secondary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.preview-msg {
+  color: var(--accent);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.error {
+  color: var(--danger);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.quiz-result {
+  margin-top: 1rem;
+}
+
+.result-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.mode-btn {
+  padding: 0.5rem 1rem;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.mode-btn:hover {
+  color: var(--text-primary);
+  background: var(--bg-card-hover);
+}
+
+.mode-btn.active {
+  background: var(--accent-muted);
+  color: var(--accent);
+}
